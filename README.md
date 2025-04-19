@@ -1,53 +1,78 @@
-# flask-to-k8s-end-to-end
+# 🚀 Flask App Deployment with Docker & Kubernetes (No Host Required)
 
-# 🐍 Flask App Deployment with Docker & Kubernetes (No Host Required)
-
-This project shows how to build and deploy a simple Python Flask application using **Docker** and **Kubernetes**, with traffic routing via an **Ingress controller** — all set up locally and without needing a custom domain name.
+This project demonstrates how to **build and deploy** a simple Python **Flask** application using **Docker** and **Kubernetes**. The setup involves traffic routing via an **Ingress controller**, all configured locally — no custom domain name required!
 
 ---
 
 ## 📸 YouTube Tutorial
 
 🎥 **Watch the full step-by-step tutorial here**  
-👉 [YouTube Video Link](https://youtube.com/your-video-link)
+👉 [Watch on YouTube](https://youtube.com/your-video-link)
 
 ---
 
-## 📁 Project Structure
+## 📂 Project Structure
 
-├── app.py                # Flask app
-├── requirements.txt
-├── Dockerfile
-├── k8s/
-│   ├── deployment.yaml
-│   ├── service.yaml
-│   └── ingress.yaml
-└── README.md
+Here's a breakdown of the project files:
 
+```plaintext
+├── app.py                # Flask app code
+├── requirements.txt      # Dependencies
+├── Dockerfile            # Docker configuration
+├── k8s/                  # Kubernetes resources
+│   ├── deployment.yaml   # Kubernetes deployment
+│   ├── service.yaml      # Kubernetes service
+│   └── ingress.yaml      # Kubernetes ingress
+└── README.md             # Project documentation
 
----
+🚀 Quick Start Guide
+🔧 Prerequisites
+Before starting, make sure you have the following:
 
-## 🚀 Quick Start Guide
+Docker installed and configured
 
-### 🔧 Prerequisites
+A Kubernetes cluster running locally (e.g., Minikube, Kind, docker desktop)
 
-- Docker installed and configured
-- Kubernetes cluster running locally (e.g. Minikube, Kind)
-- kubectl configured to access your cluster
-- Ingress Controller installed (e.g. NGINX)
+kubectl configured to access your cluster
 
-> 💡 If using Minikube, enable ingress:  
-> `minikube addons enable ingress`
+Ingress Controller installed (e.g., NGINX)
 
----
+🛠️ Steps to Deploy
+Follow these steps to get your Flask app up and running on Kubernetes!
 
-### 1. Clone the Repository
+Clone the Repository
 
-```bash
+bash
+Copy
+Edit
 git clone https://github.com/yourusername/your-repo-name.git
 cd your-repo-name
+Build and Push the Docker Image
 
-### 1. Clone the Repository
+Build your Docker image and push it to Docker Hub:
 
+bash
+Copy
+Edit
 docker build -t yourdockerhubusername/flask-app:latest .
 docker push yourdockerhubusername/flask-app:latest
+Deploy to Kubernetes
+
+Apply Kubernetes configurations to deploy the app:
+
+bash
+Copy
+Edit
+kubectl apply -f k8s/deployment.yaml
+kubectl apply -f k8s/service.yaml
+kubectl apply -f k8s/ingress.yaml
+🧰 Tech Stack
+Python 3.10 – Programming language for the Flask app
+
+Flask – Lightweight Python web framework
+
+Docker – Containerization tool for building and packaging the app
+
+Kubernetes – Orchestrating the deployment and scaling
+
+NGINX Ingress Controller – Managing incoming traffic to the app
