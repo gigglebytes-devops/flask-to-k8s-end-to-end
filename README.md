@@ -2,8 +2,6 @@
 
 This project demonstrates how to **build and deploy** a simple Python **Flask** application using **Docker** and **Kubernetes**. The setup includes traffic routing via an **Ingress controller**, configured locally without requiring a custom domain!
 
-[![YouTube Tutorial](https://youtu.be/wlTXpMNPi-g)
-
 ---
 
 ## 📂 Project Structure
@@ -31,7 +29,6 @@ Ingress controller (NGINX recommended)
 🛠️ Deployment Steps
 Clone Repository
 
-bash
 git clone https://github.com/gigglebytes-devops/flask-to-k8s-end-to-end.git
 cd flask-to-k8s-end-to-end
 
